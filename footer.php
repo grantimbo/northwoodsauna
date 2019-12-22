@@ -7,7 +7,6 @@
 					<a href="<?php echo site_url(); ?>/privacy-policy">Privacy &amp; Legal</a>
 				</div>
 			</div>
-			<?php footer_nav(); ?>
 		</div>
 	</footer>
 	</body>

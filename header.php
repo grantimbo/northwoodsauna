@@ -22,6 +22,8 @@
 		
 	</head>
 	<body <?php body_class(); ?>>
+
+	<?php /*
 		<header class="header clear">
 			<div class="wrap">
 				<div class="mobile-menu-wrap">
@@ -38,6 +40,8 @@
 				</div>
 			</div>
 		</header>
+
+	*/ ?>
 
 
 

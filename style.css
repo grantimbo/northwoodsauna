@@ -19,7 +19,7 @@ html {
 	font-size:62.5%;
 	background: #fff;
 	overflow-x: hidden;
-	color: #000;
+	color: #404042;
 }
 body {
 	font:300 14px/1.4 'Raleway', sans-serif;
@@ -154,7 +154,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"], .b
 }
 button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover {
     background: #4d853c;
-    color: #bbd3ee;
+    color: #c0eebb;
 }
 
 
@@ -192,7 +192,7 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
 .header {
 	height: 24px;
     padding: 20px 0;
-    background: #000;
+    background: #404042;
     text-align: center;
     position: relative;
 }
@@ -224,7 +224,7 @@ a.mobile-menu {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #000;
+    background: #404042;
     z-index: 1;
     display: none;
 }
@@ -309,7 +309,7 @@ footer {
     text-align: center;
     font-size: 12px;
     padding: 50px 0;
-    background: #000;
+    background: #404042;
     color: #fff;
 }
 
@@ -359,23 +359,21 @@ ul#menu-footer-menu a {
 	Home   
 \*-------------------*/ 
 
-body.page-template-template-home {
-	font-size: 1.6em;
-}
-
 .container .wrap header h1 {
 	margin-bottom: 10px;
 }
 .container .wrap header p {
 	margin-top: 0;
 }
+main.homepage {
+	text-align: center;
+}
 .homepage-hero {
 	background: url(img/bg.jpg) no-repeat 30%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: #e6e6e6;
-	color: #fff;
-    height: 35vh;
+    height: 80vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -384,77 +382,21 @@ body.page-template-template-home {
     justify-content: flex-start;
     -ms-flex-align: center;
     align-items: center;
-    padding: 1.25rem;
+	padding: 1.25rem;
 }
-.homepage-hero header {
-	width: 70%;
+.homepage-hero img {
+	max-width: 250px;
 }
-
-.homepage-hero header a.button span {
-	display: inline-block;
-	width: 20px;
-	height: 12px;
-	position: relative;
+.prod {
+	padding: 20px;
+    background: #f5f5f5;
+	box-sizing: border-box;
+	margin-bottom: 20px;
 }
-.homepage-hero header a.button span:before {
-	content: "";
-    position: absolute;
-	top: -0;
-    left: 0;
-    width: 0px;
-    height: 0px;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 10px solid #fff;
+.prod-photos{
+	    height: 200px;
+    background: #ececec;
 }
-.homepage-hero header a.button:hover span:before {
-	border-left-color: #bbd3ee;
-}
-.homepage-portfolio {
-	text-align: center;
-}
-.homepage-portfolio .wrap header h1 {
-	margin: 0 0 20px;
-}
-.project-wrap {
-	max-width: 800px;
-	margin: 0 auto;
-}
-.project-main {
-    background: #f7f7f7;
-    border: 1px solid #e2e2e2;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom: none;
-    position: relative;
-    overflow: hidden;
-}
-.project-info {
-	background: #ffff;
-    border: 1px solid #e2e2e2;
-    color: #000;
-    padding: 12px 18px;
-    margin-bottom: 20px;
-	border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-.project-info h4,
-.project-info p {
-	margin: 0;
-}
-.homepage-channel,
-.homepage-social {
-	text-align: center;
-}
-.homepage-channel {
-	background: #4d853c url('img/channel-bg.jpg') no-repeat;
-	background-size: cover;
-	color: #fff;
-}
-.social-icons {
-	font-size: 30px;
-}
-
 
 
 /*-------------------*\
