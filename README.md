@@ -1,2 +1,2 @@
 # northwoodsauna
-WP theme for NorthWoodSauna.com
+WordPress theme for NorthWoodSauna.com
