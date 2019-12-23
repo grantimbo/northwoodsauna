@@ -2,7 +2,7 @@
 	<footer class="container">
 		<div class="wrap clear">
 			<div class="copyright">
-				<p style="margin-bottom: 6px;">&copy; <?php echo date('Y'); ?> DanielAudunsson.com</p>
+				<p style="margin: 6px;"><?php echo date('Y'); ?> &copy; NorthwoodSauna.com</p>
 				<div style="text-align: center;">
 					<a href="<?php echo site_url(); ?>/privacy-policy">Privacy &amp; Legal</a>
 				</div>

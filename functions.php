@@ -111,7 +111,7 @@ function grantimbo_styles() {
     wp_register_style('normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css', array(), '2.1.3', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('grantimbo', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('grantimbo', get_template_directory_uri() . '/style.css', array(), '1.1', 'all');
     wp_enqueue_style('grantimbo'); // Enqueue it!
 
 }
@@ -330,7 +330,7 @@ function custom_login_css() {
 
 // change logo link on login form
 function custom_login_header_url($url) {
-    return 'http://grantimbo.com/';
+    return 'http://northwoodsauna.com/';
 }
 
 
@@ -391,7 +391,41 @@ function activated_get_menu() {
 }
 
 
-
+/*------------------------------------*\
+    Custom Post Types
+\*------------------------------------*/
+// Products Post Type
+add_action('init', 'products_posttype');
+function products_posttype() {
+    register_post_type('products', 
+        array(
+        'labels' => array(
+            'name' => __('Products', 'products'),
+            'singular_name' => __('Product', 'products'),
+            'add_new' => __('Add New', 'products'),
+            'add_new_item' => __('Add New Product', 'products'),
+            'edit' => __('Edit Product', 'products'),
+            'edit_item' => __('Edit Product', 'products'),
+            'new_item' => __('New Product', 'products'),
+            'view' => __('View Product', 'products'),
+            'view_item' => __('View Product', 'products'),
+            'search_items' => __('Search Products', 'products'),
+            'not_found' => __('No Products found', 'products'),
+            'not_found_in_trash' => __('No Products found in Trash', 'products')
+        ),
+        'public' => true,
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'has_archive' => true,
+        "rewrite" => array( "slug" => "products", "with_front" => false ),
+        'menu_icon' => 'dashicons-format-chat',
+        'show_in_rest' => true,
+        'supports' => array(
+            'title',
+        ),
+        'can_export' => false
+    ));
+}
 
 /*------------------------------------*\
     Actions + Filters + ShortCodes
