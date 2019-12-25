@@ -4,8 +4,7 @@
 
 	<section class="container homepage-hero">
 		<div class="wrap">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-final.png" alt="">
-			<h1>Northwood Sauna</h1>
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-final.png" alt="Northwood Sauna">
 			<p>The finest wood and sauna accesories</p>
 		</div>
 	</section>
@@ -15,28 +14,49 @@
 			<header>
 				<h1>Our Products</h1>
 			</header>
+			
 		
 			<div class="products">
+
+				<?php $args = array( 
+					'post_type' => 'products',  
+					'orderby'=> 'menu_order',  
+					'paged' => $paged
+				); 
+		
+				$temp = $wp_query; 
+				$wp_query = null; 
+				$wp_query = new WP_Query(); 
+				$wp_query->query( $args ); 
+		
+				if($wp_query->have_posts()) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+				<?php $images = get_field('images'); ?>
+
 				<div class="prod">
-					<div class="prod-photos">
-						<img src="" alt="">
-						<div class="prod-select"></div>
+					
+					<div class="product-slide">
+						<div class="slide-controls">
+							<a class="prev-slide"><i class="icon-navigate_before"></i></a>
+							<a class="next-slide"><i class="icon-navigate_next"></i></a>
+						</div>
+						<div class="slides">
+							<?php if( $images ): foreach( $images as $image ): ?>
+								<div class="slider-container" style="background-image:url(<?php echo esc_url($image['sizes']['large']); ?>)"></div>
+							<?php endforeach; endif; ?>
+						</div>
 					</div>
-					<h2>Lorem ipsum</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laboriosam.</p>
-					<div class="exc-rate star5"></div>
-					<a class="button" href="#">Buy now on Amazon</a>
+
+
+					<h2><?php the_field('title'); ?></h2>
+					<p><?php the_field('description'); ?></p>
+					<div class="exc-rate star<?php the_field('rating'); ?>"></div>
+					<a class="button" href="<?php the_field('link'); ?>">Buy now on Amazon</a>
+
 				</div>
-				<div class="prod">
-					<div class="prod-photos">
-						<img src="" alt="">
-						<div class="prod-select"></div>
-					</div>
-					<h2>Lorem ipsum</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, laboriosam.</p>
-					<div class="exc-rate star5"></div>
-					<a class="button" href="#">Buy now on Amazon</a>
-				</div>
+		
+				<?php endwhile; endif; wp_reset_query(); ?>
+
+				
 			</div>
 
 		</div>

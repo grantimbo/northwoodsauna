@@ -9,39 +9,65 @@
 $(function() {
 
 
-	menuShow = function() {
+	slider = function() {
+
+		$('.slider-container:first-child').addClass('active');
 
 
-		// menu function
-		$(document).on('click', 'a.icon-menu.mobile-menu', function(e) {
-			e.preventDefault();
-			$('.header .mobile-menu-wrap').show();
-		});
+		function shownext(tae) {
 
-
-		$(document).on('click', 'a.icon-cross.mobile-menu', function(e) {
-			e.preventDefault();
-			$('.header .mobile-menu-wrap').hide();
-		});
-
-
-
-		$(window).resize(function() {
-			if ($(window).width() > 768) {
-			   $('.header .mobile-menu-wrap').hide();
+			
+			if (tae != null) {
+				var activeSlide = tae.parent().siblings(".slides").children('.active');
+			} else {
+				var activeSlide = $('.slides .active');
 			}
-		});
 
+			if (activeSlide.is(':last-child')) {
+				activeSlide.removeClass('active');
+				$('.slides div:first-child').addClass('active');
+			} else {
+				activeSlide.removeClass('active').next().addClass('active');
+			}
+			
+			
+		}
 
+		function showprev(tae) {
 
+			if (tae != null) {
+				var activeSlide = tae.parent().siblings(".slides").children('.active');
+			} else {
+				var activeSlide = $('.slides .active');
+			}
 
-		$(document).on('click', 'a.read', function(e) {
+			if (activeSlide.is(':first-child')) {
+				activeSlide.removeClass('active');
+				$('.slides div:last-child').addClass('active');
+			} else {
+				activeSlide.removeClass('active').prev().addClass('active');
+			}
+
+		}
+
+		var timer = setInterval(shownext, 10000);
+	
+
+		$('.slide-controls a').on('click', function(e) {
 			e.preventDefault();
-			$(this).parent().parent().toggleClass('expand');
-			$(this).text(($(this).text() == 'Read More') ? 'Read Less' : 'Read More');
+
+			// reset interval
+			clearInterval(timer)
+			timer = setInterval(shownext, 10000);
+
+
+			if ($(this).hasClass('next-slide')) {
+				shownext($(this));
+			} else {
+				showprev();
+			}
+
 		});
-
-
 
 
 	},
@@ -50,7 +76,7 @@ $(function() {
 	/*--------------------------------
 	    Run functions
 	--------------------------------*/
-	menuShow();
+	slider();
 
 
 	console.log('-------------------------------');

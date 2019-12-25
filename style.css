@@ -393,10 +393,76 @@ main.homepage {
 	box-sizing: border-box;
 	margin-bottom: 20px;
 }
-.prod-photos{
-	    height: 200px;
-    background: #ececec;
+.product-slide {
+	    height: 280px;
+	background: #ececec;
+	position: relative;
 }
+
+
+
+.slides,
+.slider-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+}
+.slider-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+.slider-container.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+}
+
+.slide-controls {
+    position: absolute;
+    font-size: 50px;
+    z-index: 2;
+    top: 48%;
+    width: 100%;
+}
+.slide-controls a {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    height: 54px;
+    width: 54px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+}
+a.prev-slide {
+    left: 0;
+}
+a.next-slide {
+    right: 0;
+}
+.slide-controls i {
+	border: solid white;
+	border-width: 0 5px 5px 0;
+	display: inline-block;
+	padding: 6px;
+	position: absolute;
+	top: 18px;
+}
+.slide-controls i.icon-navigate_next {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	left: 14px;
+}
+.slide-controls i.icon-navigate_before {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	left: 20px;
+}
+
 
 
 /*-------------------*\
