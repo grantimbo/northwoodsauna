@@ -2,7 +2,7 @@
 	Theme Name: Northwood Sauna
 	Theme URI: http://northwoodsauna.com/
 	Description: A theme handcraft by @grantimbo
-	Version: 1.1
+	Version: 1.2
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Sauna, Wood
@@ -54,7 +54,7 @@ a {
 	border: 0;
 }
 a:hover {
-	color: #3996da;
+	color: #71aa5f;
 }
 a:focus {
 	outline:0;
@@ -76,7 +76,7 @@ h5 { font-size: 1.1em; }
 
 input:focus {
 	outline:0;
-	border:1px solid #04A4CC;
+	border:1px solid #04cc51;
 }
 
 
@@ -105,7 +105,7 @@ input:not([type=submit]):not([type=file]), textarea {
 	border: 1px solid #DCDCDC;
 }
 input:not([type=submit]):not([type=file]):focus, textarea:focus {
-	border: 1px solid #598DFB;
+	border: 1px solid rgb(89, 251, 111);
 	color: #000000;
 	background: #EDF2FD;
 }
@@ -392,9 +392,10 @@ main.homepage {
     background: #f5f5f5;
 	box-sizing: border-box;
 	margin-bottom: 20px;
+	width: 100%;
 }
 .product-slide {
-	    height: 280px;
+	height: 280px;
 	background: #ececec;
 	position: relative;
 }
@@ -430,13 +431,13 @@ main.homepage {
     width: 100%;
 }
 .slide-controls a {
-    cursor: pointer;
+	cursor: pointer;
     position: absolute;
     top: 0;
-    height: 54px;
-    width: 54px;
+    height: 40px;
+    width: 40px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.22);
 }
 a.prev-slide {
     left: 0;
@@ -450,85 +451,20 @@ a.next-slide {
 	display: inline-block;
 	padding: 6px;
 	position: absolute;
-	top: 18px;
+	top: 12px;
 }
 .slide-controls i.icon-navigate_next {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
-	left: 14px;
+	left: 8px;
 }
 .slide-controls i.icon-navigate_before {
 	transform: rotate(135deg);
 	-webkit-transform: rotate(135deg);
-	left: 20px;
+	right: 8px;
 }
 
 
-
-/*-------------------*\
-	Clients   
-\*-------------------*/
-.clients-header {
-	background: #4d853c url('img/channel-bg.jpg') no-repeat;
-	background-size: cover;
-	color: #fff;
-}
-.clients-header h1 {
-	margin: 0;
-}
-.client-list {
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-	box-sizing: border-box;
-	text-align: center;
-}
-.client-list iframe {
-	width: 100%;
-	height: 208px;
-	display: block;
-}
-
-.clients-case-study {
-	border-top: 1px solid #e7e7e7;
-	background: #f9f9f9;
-	text-align: center;
-}
-.clients-case-study a.button {
-	font-size: 2rem;
-}
-
-/*------------------------*\
-	Terms & Privacy Page    
-\*------------------------*/ 
-.terms-privacy-container .wrap {
-	max-width: 1030px;
-}
-.terms-privacy-container ul#menu-terms-privacy-menu {
-	padding: 0;
-    list-style: none;
-    margin: 20px 0 60px;
-    display: block;
-}
-.terms-privacy-container ul#menu-terms-privacy-menu li a {
-	padding: 5px 0; 
-	display: block;
-	font-size: 18px;
-}
-.terms-privacy-container ul#menu-terms-privacy-menu li.active a {
-	color: #ccc;
-}
-
-
-
-/*----------------*\
-	Contact Page    
-\*----------------*/
-.contact-container-header {
-	height: 130px;
-    background-size: cover;
-    background-position: center 33%;
-}
 
 
 /*------------*\
@@ -551,17 +487,17 @@ a.next-slide {
 
 /* selection */
 ::selection {
-	background: #126aa2;
+	background: #4d853c;
 	color:#fff;
 	text-shadow:none;
 }
 ::-webkit-selection {
-	background:#126aa2;
+	background:#4d853c;
 	color:#fff;
 	text-shadow:none;
 }
 ::-moz-selection {
-	background:#126aa2;
+	background:#4d853c;
 	color:#fff;
 	text-shadow:none;
 }
@@ -621,8 +557,8 @@ a.close-menu {
 /* Extra Small Devices, Phones */ 
 @media (min-width : 560px) {
 
-	.client-list iframe {
-		height: 280px;
+	.product-slide {
+		height: 580px;
 	}
 
 }
@@ -642,6 +578,11 @@ a.close-menu {
 		font-size: 120%;
 	}
 
+	/*home*/
+	.homepage-hero {
+	    height: 70vh;
+	}
+
 
 	/*elements*/
 	footer.container {
@@ -653,110 +594,6 @@ a.close-menu {
 
 
 
-
-	/*home page*/
-	.homepage-hero {
-		height: 60vh;
-	}
-	.homepage-hero header {
-		width: 70%;
-	}
-	body.page-template-template-home .container .wrap {
-		position: relative;
-		max-width: 1120px;
-	}
-	.homepage-portfolio {
-	    text-align: center;
-	    padding: 50px 20px 40px;
-	}
-	.homepage-channel,
-	.homepage-social,
-	.clients-header,
-	.clients-case-study {
-		height: 60vh;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		-ms-flex-align: center;
-		align-items: center;
-	}
-	.homepage-portfolio .wrap header h1 {
-		margin-bottom: 40px;
-	}
-	.homepage-social {
-		height: 30vh;
-	}
-	.homepage-channel {
-		height: 40vh;
-	}
-	.homepage-social {
-		background-color: #f6f6f6;
-	}
-	.project-container {
-		width: 33.333%;
-	    padding: 10px;
-	    float: left;
-	}
-	.project-container:first-child { padding-left: 0; }
-	.project-container:last-child { padding-right: 0; }
-
-
-
-
-	/*clients*/
-	.clients-header {
-		height: 30vh;
-		text-align: center;
-	}
-	.clients-case-study {
-		height: 14vh;
-	}
-	.clients-case-study a.button {
-	    font-size: 3rem;
-	}
-
-
-
-	/*terms and privacy*/
-	body.page-template-template-terms-privacy header.header {
-		position: fixed;
-		width: 100%;
-		top: 0;
-	}
-	body.page-template-template-terms-privacy.logged-in.admin-bar header.header {
-		top: 32px;
-	}
-	.terms-privacy-container {
-		margin-top: 64px;
-		min-height: 400px;
-	}
-	.terms-privacy-container aside {
-		float: left;
-		width: 25%;
-		position: relative;
-	}
-	.terms-privacy-container #menu-terms-privacy-menu {
-		position: fixed;
-	}
-	.terms-privacy-container section {
-		float: right;
-		width: 75%;
-	}
-
-	
-	/*contact*/
-	.contact-container-header {
-		height: 280px;
-	}
-	.contact-container {
-		margin-bottom: 70px;
-	}
-    
-
-
 }
 
 
@@ -764,19 +601,28 @@ a.close-menu {
 @media (min-width: 992px) {
 
 
-	/*home*/
-	.homepage-hero {
-	    background-position-y: 32%;
-	    margin: 0 auto;
-	    height: 70vh;
+	
+
+	.product-slide {
+		height: 580px;
 	}
 
-	.client-list {
-		float: left;
-		width: 50%;
+	.products {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
+		justify-items: center;
+		align-items: center;
+		margin-bottom: 4rem;
 	}
-	.client-list iframe {
-		height: 314px;
+
+	.prod {
+		margin: 0;
+		height: 100%;
+	}
+
+	.container .wrap header h1 {
+		margin-bottom: 20px;
 	}
 
 
@@ -796,127 +642,3 @@ a.close-menu {
 	
 }
 
-
-
-
-
-
-/*------------------------------------*\
-    WORDPRESS CORE
-\*------------------------------------*/
-
-.aligncenter,
-div.aligncenter {
-	display:block;
-	margin:5px auto 5px auto;
-}
-.alignright {
-	float:right;
-	margin:5px 0 20px 20px;
-}
-.alignleft {
-	float:left;
-	margin:5px 20px 20px 0;
-}
-img.alignright {
-	float:right;
-	width: auto;
-}
-
-img.alignleft {
-	float:left;
-	width: auto;
-}
-img.aligncenter {
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	width: auto;
-}
-.wp-caption {
-	background:#FFF;
-	border:1px solid #F0F0F0;
-	max-width:96%;
-	padding:5px 3px 10px;
-	text-align:center;
-}
-.wp-caption.alignnone {
-	margin:5px 20px 20px 0;
-}
-.wp-caption.alignleft {
-	margin:5px 20px 20px 0;
-}
-.wp-caption.alignright {
-	margin:5px 0 20px 20px;
-}
-.wp-caption img {
-	border:0 none;
-	height:auto;
-	margin:0;
-	max-width:98.5%;
-	padding:0;
-	width:auto;
-}
-.wp-caption .wp-caption-text,
-.gallery-caption {
-	font-size:11px;
-	line-height:17px;
-	margin:0;
-	padding:0 4px 5px;
-}
-
-
-
-/*------------------------------------*\
-    PRINT
-\*------------------------------------*/
-
-@media print {
-	* {
-		background:transparent !important;
-		color:#000 !important;
-		box-shadow:none !important;
-		text-shadow:none !important;
-	}
-	a,
-	a:visited {
-		text-decoration:underline;
-	}
-	a[href]:after {
-		content:" (" attr(href) ")";
-	}
-	abbr[title]:after {
-		content:" (" attr(title) ")";
-	}
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content:"";
-	}
-	pre,blockquote {
-		border:1px solid #999;
-		page-break-inside:avoid;
-	}
-	thead {
-		display:table-header-group;
-	}
-	tr,img {
-		page-break-inside:avoid;
-	}
-	img {
-		max-width:100% !important;
-	}
-	@page {
-		margin:0.5cm;
-	}
-	p,
-	h2,
-	h3 {
-		orphans:3;
-		widows:3;
-	}
-	h2,
-	h3 {
-		page-break-after:avoid;
-	}
-}

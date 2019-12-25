@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 1
+// Version : 1.1
 // Description : Custom Script for northwoodsauna.com
 // ---------------------------
 
@@ -18,16 +18,16 @@ $(function() {
 
 			
 			if (tae != null) {
-				var activeSlide = tae.parent().siblings(".slides").children('.active');
+				var activeNxtSlide = tae.parent().siblings(".slides").children('.active');
 			} else {
-				var activeSlide = $('.slides .active');
+				var activeNxtSlide = $('.slides .active');
 			}
 
-			if (activeSlide.is(':last-child')) {
-				activeSlide.removeClass('active');
+			if (activeNxtSlide.is(':last-child')) {
+				activeNxtSlide.removeClass('active');
 				$('.slides div:first-child').addClass('active');
 			} else {
-				activeSlide.removeClass('active').next().addClass('active');
+				activeNxtSlide.removeClass('active').next().addClass('active');
 			}
 			
 			
@@ -36,16 +36,16 @@ $(function() {
 		function showprev(tae) {
 
 			if (tae != null) {
-				var activeSlide = tae.parent().siblings(".slides").children('.active');
+				var activePrevSlide = tae.parent().siblings(".slides").children('.active');
 			} else {
-				var activeSlide = $('.slides .active');
+				var activePrevSlide = $('.slides .active');
 			}
 
-			if (activeSlide.is(':first-child')) {
-				activeSlide.removeClass('active');
+			if (activePrevSlide.is(':first-child')) {
+				activePrevSlide.removeClass('active');
 				$('.slides div:last-child').addClass('active');
 			} else {
-				activeSlide.removeClass('active').prev().addClass('active');
+				activePrevSlide.removeClass('active').prev().addClass('active');
 			}
 
 		}
@@ -64,7 +64,7 @@ $(function() {
 			if ($(this).hasClass('next-slide')) {
 				shownext($(this));
 			} else {
-				showprev();
+				showprev($(this));
 			}
 
 		});
