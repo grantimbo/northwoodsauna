@@ -343,10 +343,16 @@ function remove_menus() {
     }
 }
 
+
+
 // remove wordpress logo
 function activated_adminbar() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('wp-logo');
+    $wp_admin_bar->remove_menu('comments');
+	$wp_admin_bar->remove_menu('customize');
+	$wp_admin_bar->remove_menu('customize-background');
+	$wp_admin_bar->remove_menu('customize-header');
 }
 
 
