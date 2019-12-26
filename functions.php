@@ -373,23 +373,23 @@ function activated_get_menu() {
 
     <style>
         .btn-custom-setting {
-            background: #00a8e1;
+            background: #4d853c;
             color: #FFFFFF;
             font-size: 16px;
             padding: 12px 20px;
-            display: inline-block;
+            border-radius: 3px;
+            display: block;
+            text-decoration: none;
         }
         .btn-custom-setting:hover {
-            background: #006f95;
-            color: #ade0ee;
+            background: #6a9c5a;
+            color: #c9e2c1;
         }
             
     </style>
 
     <div class="grntx-wrap clear">
-        <a href="edit.php" class="btn-custom-setting">Clients</a>
-        <a href="" class="btn-custom-setting">Client Results</a>
-        <a href="" class="btn-custom-setting">Results</a>
+        <a href="edit.php?post_type=products" class="btn-custom-setting">Products</a>
     </div>
 
     <?php //-- html end -->
