@@ -50,7 +50,7 @@
 					<h2><?php the_field('title'); ?></h2>
 					<p><?php the_field('description'); ?></p>
 					<div class="exc-rate star<?php the_field('rating'); ?>"></div>
-					<a class="button" href="<?php the_field('link'); ?>">Buy now on Amazon</a>
+					<a class="button" target="_blank" href="<?php the_field('link'); ?>">Buy now on Amazon</a>
 
 				</div>
 		
