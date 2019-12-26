@@ -2,7 +2,7 @@
 	Theme Name: Northwood Sauna
 	Theme URI: http://northwoodsauna.com/
 	Description: A theme handcraft by @grantimbo
-	Version: 1.2
+	Version: 1.3
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Sauna, Wood
@@ -464,7 +464,21 @@ a.next-slide {
 	right: 8px;
 }
 
-
+/* rating */
+.exc-rate {
+	background: url(img/sprite.png);
+    width: 112px;
+    height: 20px;
+    background-position: 0 0;
+    display: block;
+    position: relative;
+    margin: 0 auto 20px;
+}
+.exc-rate.star4 {background-position-y: -20px;}
+.exc-rate.star3 {background-position-y: -41px;}
+.exc-rate.star2 {background-position-y: -62px;}
+.exc-rate.star1 {background-position-y: -82px;}
+.exc-rate.star0 {background-position-y: -102px;}
 
 
 /*------------*\

@@ -111,7 +111,7 @@ function grantimbo_styles() {
     wp_register_style('normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css', array(), '2.1.3', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('grantimbo', get_template_directory_uri() . '/style.css', array(), '1.2', 'all');
+    wp_register_style('grantimbo', get_template_directory_uri() . '/style.css', array(), '1.3', 'all');
     wp_enqueue_style('grantimbo'); // Enqueue it!
 
 }
