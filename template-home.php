@@ -5,7 +5,7 @@
 	<section class="container homepage-hero">
 		<div class="wrap">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-final.png" alt="Northwood Sauna">
-			<p>The finest wood and sauna accesories</p>
+			<p><?php the_field('description'); ?></p>
 		</div>
 	</section>
 
@@ -67,7 +67,7 @@
 			<header>
 				<h1>About Us</h1>
 			</header>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi maxime dolores temporibus, alias provident, illum ullam aut sunt repudiandae ex praesentium quibusdam error nemo necessitatibus explicabo, sequi laborum quod deleniti ut. Quos doloremque iusto cum aliquam sit assumenda labore ipsam illum! Numquam soluta nesciunt facilis! Nam sit sunt sequi a?</p>
+			<p><?php the_field('about_us'); ?></p>
 		</div>
 	</section>
 
@@ -77,7 +77,7 @@
 			<header>
 				<h1>Guarantee & Support</h1>
 			</header>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi maxime dolores temporibus, alias provident, illum ullam aut sunt repudiandae ex praesentium quibusdam error nemo necessitatibus explicabo, sequi laborum quod deleniti ut. Quos doloremque iusto cum aliquam sit assumenda labore ipsam illum! Numquam soluta nesciunt facilis! Nam sit sunt sequi a?</p>
+			<p><?php the_field('guarantee_support'); ?></p>
 		</div>
 	</section>
 
