@@ -18,7 +18,7 @@
 	    <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
     <body>
-        <img style="display: table; margin: 30vh auto; max-width: 230px;" src="<?php echo get_template_directory_uri(); ?>/img/logo-final.png" alt="Northwood Sauna">
+        <img style="display: table; margin: 30vh auto; max-width: 230px;" src="<?php echo get_template_directory_uri(); ?>/img/logo-black.png" alt="Northwood Sauna">
     <body>
 
 </html>

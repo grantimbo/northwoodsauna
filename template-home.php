@@ -4,7 +4,7 @@
 
 	<section class="container homepage-hero">
 		<div class="wrap">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-final.png" alt="Northwood Sauna">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-black.png" alt="Northwood Sauna">
 			<p><?php the_field('description'); ?></p>
 		</div>
 	</section>
