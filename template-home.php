@@ -62,8 +62,8 @@
 		</div>
 	</section>
 
-	<section class="container">
-		<div class="wrap" style="max-width: 880px;">
+	<section class="container homepage-about-us">
+		<div class="wrap" >
 			<header>
 				<h1>About Us</h1>
 			</header>
@@ -72,8 +72,8 @@
 	</section>
 
 
-	<section class="container">
-		<div class="wrap" style="max-width: 880px;">
+	<section class="container homepage-guarantee-support">
+		<div class="wrap" >
 			<header>
 				<h1>Guarantee & Support</h1>
 			</header>
