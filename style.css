@@ -479,6 +479,14 @@ a.next-slide {
 .exc-rate.star0 {background-position-y: -102px;}
 
 
+/* container homepage-about-us */
+.homepage-about-us {
+	background: url(img/bg.jpg) no-repeat 0 86%;
+}
+.homepage-about-us p {
+	margin-bottom: 50px;
+}
+
 /* homepage guarantee and about */
 .homepage-guarantee-support .wrap,
 .homepage-about-us  .wrap{
